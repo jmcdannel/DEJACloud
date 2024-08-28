@@ -1,8 +1,16 @@
 {
   "name": "deja-components",
+  "type": "module",
   "version": "0.0.0",
   "private": true,
-  "type": "module",
+  "main": "dist/deja-components.umd.js",
+  "module": "dist/deja-components.js",
+  "exports": {
+    ".": {
+      "import": "./dist/deja-components.js",
+      "require": "./dist/deja-components.umd.js"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
