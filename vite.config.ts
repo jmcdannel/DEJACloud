@@ -21,6 +21,17 @@ export default defineConfig({
     vueJsx(),
     vueDevTools()
   ],
+  build: {
+    lib: {
+      entry: './src/main.ce.ts',
+      name: 'deja-components',
+      // the proper extensions will be added
+      fileName: 'deja-components'
+    }
+  },
+  define: {
+    'process.env': process.env
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
