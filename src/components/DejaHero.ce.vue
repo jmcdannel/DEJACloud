@@ -6,7 +6,7 @@ defineProps<{
 
 <template>
   <div
-    className="hero bg-base-200 py-12 mb-8 bg-gradient-to-br from-indigo-950 to-teal-950 rounded-3xl"
+    className="m-4 bg-base-200 py-12 mb-8 bg-gradient-to-br from-indigo-950 to-teal-950 rounded-3xl"
   >
     <div className="hero-content text-center">
       <div className="max-w-md">

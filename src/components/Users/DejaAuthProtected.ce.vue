@@ -10,6 +10,7 @@ const user = useCurrentUser()
 
 <template>
   <template v-if="!user">
+    <slot name="login-header"></slot>
     <slot>
       <DejaLogin />
     </slot>

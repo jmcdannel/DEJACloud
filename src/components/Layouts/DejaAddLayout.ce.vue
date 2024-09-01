@@ -37,11 +37,8 @@ async function handleLayout() {
     <pre>{{ layout }}</pre>
   </template>
   <template v-else>
-    <div class="alert alert-info">
-      <p>Looks like your're new here! Let's get you started.</p>
-    </div>
-    <div
-      class="flex flex-col my-8 p-4 outline-secondary border-secondary rounded-lg bg-gradient-to-b from-gray-800 to bg-gray-950"
+    <main
+      class="px-8 pt-6 pb-8 mb-4 flex flex-col mx-8 p-4 outline-secondary border-secondary rounded-lg bg-gradient-to-b from-gray-800 to bg-gray-950"
     >
       <h2 class="text-xl">
         Connect to your
@@ -85,6 +82,6 @@ async function handleLayout() {
       <button @click="handleLayout" class="btn btn-primary">
         Generate DEJA Cloud Layout Instance
       </button>
-    </div>
+    </main>
   </template>
 </template>
