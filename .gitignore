@@ -28,3 +28,10 @@ coverage
 *.sw?
 
 *.tsbuildinfo
+
+.env
+**/*.env
+yarn-error.log
+.vercel
+.env*.local
+**/*/dist/
