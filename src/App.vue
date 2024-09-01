@@ -1,49 +1,17 @@
-<script setup lang="ts">
-import DejaHero from './components/DejaHero.ce.vue'
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+<script setup>
+import DejaCloudLayout from './components/Core/Layout/DejaCloudLayout.vue'
+import DejaCloudApp from '@/components/Core/App/DejaCloud.ce.vue'
+import DejaAuthProtected from './components/Users/DejaAuthProtected.ce.vue'
+import 'vuestic-ui/styles/essential.css'
+import 'vuestic-ui/styles/typography.css'
+import '@/assets/overrides.css'
 </script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <DejaHero msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <DejaAuthProtected>
+    <template v-slot:authenticated>
+      <DejaCloudLayout>
+        <DejaCloudApp />
+      </DejaCloudLayout>
+    </template>
+  </DejaAuthProtected>
 </template>
-
-<style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
-</style>
-./components/DejaHero.ce.vue
