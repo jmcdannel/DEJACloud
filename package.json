@@ -13,12 +13,18 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/"
   },
+  "resolutions": {
+    "alias": {
+      "@": "./src"
+    }
+  },
   "dependencies": {
     "@vueuse/core": "^11.0.3",
     "@vueuse/firebase": "^11.0.3",
     "firebase": "^10.13.0",
     "vue": "^3.4.29",
-    "vuefire": "^3.2.0"
+    "vuefire": "^3.2.0",
+    "vuestic-ui": "^1.10.0"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.8.0",
@@ -31,8 +37,8 @@
     "@vue/eslint-config-typescript": "^13.0.0",
     "@vue/test-utils": "^2.4.6",
     "@vue/tsconfig": "^0.5.1",
+    "@vuestic/tailwind": "^0.1.5",
     "autoprefixer": "^10.4.20",
-    "daisyui": "^4.12.10",
     "eslint": "^8.57.0",
     "eslint-plugin-vue": "^9.23.0",
     "jsdom": "^24.1.0",
